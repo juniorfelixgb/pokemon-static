@@ -28,9 +28,10 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
             angle: -100,
             origin: {
                 x: 1,
-                y: 0
-            },
-        });
+                y: 0,
+            }
+        })
+
     };
 
     return (
@@ -72,10 +73,12 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
                             <Text transform="capitalize" h1>{pokemon.name}</Text>
 
                             <Button
-                                color={'gradient'}
-                                ghost={!isInFavorite}
-                                onPress={onToggleFavorite}
-                            >{isInFavorite ? 'Remover de' : 'Guardar en'} favoritos</Button>
+                                color="gradient"
+                                ghost={ !isInFavorite }
+                                onClick={ onToggleFavorite }
+                                >
+                                { isInFavorite ? 'En Favoritos' : 'Guardar en favoritos' }
+                            </Button>
                         </Card.Header>
                         <Card.Body>
                             <Text size={30}>Sprites:</Text>

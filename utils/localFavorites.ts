@@ -19,10 +19,13 @@ const getPokemons = (): number[] =>
     JSON.parse(localStorage.getItem('favorites') || '[]');
 
 const pokemonExist = (id: number): boolean => {
-    if (typeof window !== undefined) return false;
-    let favorites: number[] = JSON.parse(localStorage.getItem('favorites') || '[]');
-    return favorites.includes(id);
-}
+
+    if ( typeof window === 'undefined' ) return false;
+    
+    const favorites: number[] = JSON.parse( localStorage.getItem('favorites') || '[]' );
+
+    return favorites.includes( id );
+};
 
 export default {
     toggleFavorite,

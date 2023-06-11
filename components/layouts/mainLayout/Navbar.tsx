@@ -28,11 +28,8 @@ export const Navbar = () => {
                         <Container css={{
                             display: 'flex'
                         }}>
-                            <Text h1 color='yellow'>
-                                P
-                            </Text>
                             <Text color="white" h2>
-                                ok&eacute;mon
+                                Pok&eacute;mon
                             </Text>
                         </Container>
                     }
